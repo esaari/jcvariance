@@ -20,9 +20,16 @@
 <script>
     var map;
     function initMap() {
+        var jerseyCityCenter = {lat: 40.719565, lng: -74.043004}
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 40.719565, lng: -74.043004},
+            center: jerseyCityCenter,
             zoom: 15
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
         });
     }
 </script>
